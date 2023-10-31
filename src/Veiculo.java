@@ -3,6 +3,12 @@ public abstract class Veiculo {
     private String modelo;
     private double preco;
 
+    public Veiculo(){
+        this.marca = "";
+        this.modelo = "";
+        this.preco = 0;
+    }
+
     public String getMarca() {
         return marca;
     }
@@ -25,5 +31,16 @@ public abstract class Veiculo {
 
     public void setPreco(double preco) {
         this.preco = preco;
+    }
+
+    @Override
+    public String toString(){
+        String objeto;
+
+        objeto = "Marca:" + this.getModelo() + " ";
+        objeto += "Modelo:" + this.getMarca() + " ";
+        objeto += "Preco:" + this.getPreco();
+
+        return objeto;
     }
 }
