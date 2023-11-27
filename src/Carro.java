@@ -14,13 +14,24 @@ public class Carro extends Veiculo{
     }
 
     @Override
+    public int hashCode() {
+        return super.hashCode();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        return super.equals(o);
+    }
+
+    @Override
     public String toString() {
         String objeto;
 
-        objeto = "Marca:" + this.getModelo() + " ";
-        objeto += "Modelo:" + this.getMarca() + " ";
-        objeto += "Preco:" + this.getPreco() + " ";
-        objeto += "Tipo Combustivel" + this.getTipoCombustivel();
+        objeto = "Placa: " + this.getPlaca() + "\n";
+        objeto += "Marca:" + this.getModelo() + "\n";
+        objeto += "Modelo:" + this.getMarca() + "\n";
+        objeto += "Preco:" + this.getPreco() + "\n";
+        objeto += "Tipo Combustivel: " + this.getTipoCombustivel() + "\n";
 
         return objeto;
     }

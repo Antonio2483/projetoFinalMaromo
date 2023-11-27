@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public abstract class Veiculo {
     private String marca;
     private String modelo;
@@ -14,6 +16,8 @@ public abstract class Veiculo {
         this.placa = "";
         this.vendido = false;
     }
+
+    
 
     public String getMarca() {
         return marca;
@@ -56,6 +60,19 @@ public abstract class Veiculo {
     }
 
     @Override
+    public int hashCode() {
+        return modelo.length();
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Veiculo veiculo = (Veiculo) o;
+        return Objects.equals(placa, veiculo.placa);
+    }
+
+    @Override
     public String toString(){
         String objeto;
 
@@ -66,5 +83,13 @@ public abstract class Veiculo {
         objeto += "Vendido?: " + (this.getVendido() ? "Sim" : "Não");
 
         return objeto;
+    }
+
+    public boolean isPlaca(String placa){
+        if(placa.equals(this.placa)){
+            return true;
+        }else{
+            return false;
+        }
     }
 }
