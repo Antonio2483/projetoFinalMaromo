@@ -3,6 +3,7 @@ import java.util.List;
 import java.util.Objects;
 
 public class Loja {
+    //Declaração de variaveis
 
     private String nomeLoja;
     private List<Veiculo> listaVeiculos;
@@ -11,6 +12,7 @@ public class Loja {
         this.nomeLoja = nomeLoja;
         this.listaVeiculos = new ArrayList<>();
     }
+    //Gets e Sets
 
     public String getNomeLoja() {
         return nomeLoja;
@@ -20,10 +22,12 @@ public class Loja {
         this.nomeLoja = nomeLoja;
     }
 
+    //Função para adicionar o veiculo
     public void adicionarVeiculo(Veiculo newVeiculo){
 
         Veiculo repetido = this.encontrarVeiculo(newVeiculo.getPlaca());
 
+        //Verifica se tem uma placa igual
         if(repetido != null){
             System.out.println("Já existe um veículo com essa placa na concessionária");
         }else{
@@ -32,6 +36,7 @@ public class Loja {
         }
     }
 
+    //Função para remover o veiculo
     public void removerVeiculo(Veiculo veiculoRemover){
 
         if(veiculoRemover != null){
@@ -41,6 +46,7 @@ public class Loja {
         }
 
     }
+    //Função para listar os veiculos
 
     public void listarVeiculos(){
         for (Veiculo v: this.listaVeiculos) {
@@ -50,6 +56,7 @@ public class Loja {
         }
     }
 
+    //Função para listar os veiculos vendidos
     public void listarVeiculos(Boolean vendido){
         for (Veiculo v: this.listaVeiculos) {
             if(v.getVendido() == vendido){
@@ -60,6 +67,7 @@ public class Loja {
         }
     }
 
+    //Função para Calcular o valor do estoque
     public double calcularValorEstoque(){
         double valorTotal = 0;
 
@@ -71,6 +79,7 @@ public class Loja {
         return valorTotal;
     }
 
+    //Função para encontrar o Veiculo utilizando a placa
     public Veiculo encontrarVeiculo(String placa){
 
         // gambiarrinha

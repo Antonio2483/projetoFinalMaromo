@@ -41,6 +41,8 @@ public class gerenciarLoja {
                         System.out.print("Digite o tipo de veículo (Carro ou Moto): ");
                         String tipoVeiculo = scanner.next();
 
+                        //Ifs para ver se é Carro ou Moto
+
                         if (tipoVeiculo.equalsIgnoreCase("Carro")) {
                             gerenciar.criarCarro(gerenciar.lojaAtual);
                         } else if (tipoVeiculo.equalsIgnoreCase("Moto")) {
@@ -95,6 +97,8 @@ public class gerenciarLoja {
             }
         }
 
+        //Função para vender os Veiculos
+
     private void venderVeiculo() {
         Scanner sc = new Scanner(System.in);
         System.out.println("Digite a placa do veiculo");
@@ -110,6 +114,7 @@ public class gerenciarLoja {
         }
     }
 
+        //Função para Criar uma Moto
     public void criarMoto(Loja lojaAtual){
             Scanner sc = new Scanner(System.in);
             Moto newMoto = new Moto();
@@ -127,6 +132,8 @@ public class gerenciarLoja {
 
             lojaAtual.adicionarVeiculo(newMoto);
         }
+
+        //Função para Criar um Carro
         public void criarCarro(Loja lojaAtual){
             Scanner sc = new Scanner(System.in);
 
@@ -146,6 +153,7 @@ public class gerenciarLoja {
             lojaAtual.adicionarVeiculo(newCarro);
         }
 
+        //Função para criar a Loja
         public void criarLoja(){
             Scanner sc = new Scanner(System.in);
 
@@ -158,7 +166,7 @@ public class gerenciarLoja {
                 lojaAtual = l;
             }
         }
-
+        //Função para Trocar de Loja
         public void trocarLoja(){
             Scanner sc = new Scanner(System.in);
 
@@ -178,6 +186,7 @@ public class gerenciarLoja {
             }
         }
 
+        //Função para Verificar a Loja
         public boolean verificarLoja(){
             if(lojaAtual == null){
                 System.out.println("Nenhuma loja selecionada");

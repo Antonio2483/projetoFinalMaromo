@@ -1,6 +1,7 @@
 import java.util.Objects;
-
+//Declaração da classe abstrata
 public abstract class Veiculo {
+    //Declaração das variaveis
     private String marca;
     private String modelo;
     private double preco;
@@ -17,7 +18,7 @@ public abstract class Veiculo {
         this.vendido = false;
     }
 
-    
+    //Gets e Sets
 
     public String getMarca() {
         return marca;
@@ -72,6 +73,7 @@ public abstract class Veiculo {
         return Objects.equals(placa, veiculo.placa);
     }
 
+    //Escrita do método toString
     @Override
     public String toString(){
         String objeto;
@@ -84,6 +86,7 @@ public abstract class Veiculo {
 
         return objeto;
     }
+    //Booleano para confirmar a placa encontrada
 
     public boolean isPlaca(String placa){
         if(placa.equals(this.placa)){

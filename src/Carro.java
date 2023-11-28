@@ -1,9 +1,13 @@
 public class Carro extends Veiculo{
+
+    //Declaração das variaveis
     private String tipoCombustivel;
 
     public Carro(){
         super();
     }
+
+    //Gets e Sets
 
     public String getTipoCombustivel() {
         return tipoCombustivel;
@@ -23,6 +27,7 @@ public class Carro extends Veiculo{
         return super.equals(o);
     }
 
+    //Declaração do método toString
     @Override
     public String toString() {
         String objeto;

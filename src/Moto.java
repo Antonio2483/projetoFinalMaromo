@@ -1,8 +1,11 @@
 public class Moto extends Veiculo{
+    //Declaração das variaveis
     String tipoGuidao;
     public Moto(){
         super();
     }
+
+    //Gets e Sets
 
     public String getTipoGuidao() {
         return tipoGuidao;
@@ -22,6 +25,7 @@ public class Moto extends Veiculo{
         return super.equals(o);
     }
 
+    //Declaração do método toString
     @Override
     public String toString() {
         String objeto;
